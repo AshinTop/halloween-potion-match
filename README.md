@@ -1,140 +1,105 @@
-# Witch’s Potion Match — Halloween Match-3 Puzzle Game
+[English](README.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md)
 
-**Swap enchanted ingredients, light the candles, and brew twelve little bottles of Halloween magic.** Witch’s Potion Match is a free browser puzzle from Midnight Candy Club, created as a seasonal companion for [BlockBlasty](https://blockblasty.top/). It combines familiar match-three swaps with ingredient recipes, spatial candle objectives, and a carefully timed Moon Spark.
+# 🎃 Witch’s Potion Match — Halloween Match-3 Puzzle Game
 
-**[Play online](https://halloween-potion-match.crazy3d.org/)** · [Embedding guide](EMBEDDING.md) · [Game design](DESIGN.md)
+**A little moonlight, a handful of sweets, and one more lovely cascade.** Brew twelve Halloween potions by swapping illustrated ingredients, collecting recipe targets, and lighting candles. This cozy browser match-3 game belongs to Midnight Candy Club and was created for [BlockBlasty](https://blockblasty.top/).
 
-**Live deployment:** Play on Cloudflare using the link above. The site is deployed from this GitHub repository. Hosting scripts and request logging may be added by Cloudflare independently of the game code.
+**[Play online](https://halloween-potion-match.crazy3d.org/)** · [All Halloween games](https://github.com/AshinTop/halloween-games) · [Embedding guide](EMBEDDING.md) · [Design notes](DESIGN.md)
 
-[Video player and transcript](https://halloween-potion-match.crazy3d.org/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
+**Document languages:** English, 简体中文, Español, Português (Brasil), 日本語. **Game interface:** English and Simplified Chinese only; the other README languages do not add in-game translations.
 
-![Witch’s Potion Match: a Halloween match-three board with illustrated ingredients, recipe goals, and candle objectives](docs/images/gameplay.jpg)
+![Witch’s Potion Match Halloween match-3 board with five ingredients, recipe counters and candle goals](docs/images/gameplay.jpg)
 
-Enjoy brewing a little magic? **[Star this repository](https://github.com/AshinTop/halloween-potion-match)** to keep it in your collection and follow future improvements.
+## What is in the cauldron? 👻
 
-## A cozy puzzle with a little strategy
+- **12 reproducible recipes** on a 6×6 board, with five original ingredients: pumpkin candy, moonlight, bat berries, mint leaves, and stardust.
+- Ordinary adjacent swaps, simultaneous matches, gravity, and cascading clears. Every campaign recipe has a verified completion using ordinary swaps.
+- Candles that reward **where** you match, plus one Moon Spark for a tactical row-and-column clear.
+- Sparkles, ingredient trails, accurate falling pieces, small landing bounces, and escalating combo messages make each cascade readable.
+- Useful hints, recipe selection, unlimited restarts, local scores and stars, optional sound, and reduced-motion support.
 
-The board holds five original illustrated ingredients: pumpkin candy, moonlight, bat berries, mint leaves, and stardust. Match at least three identical ingredients in a horizontal or vertical line. New ingredients fall from above, and cascades count toward the recipe while increasing the score multiplier.
+## How to brew
 
-Every recipe asks for particular quantities, so a large clear is not always the most useful clear. Later recipes add candle positions: clearing an ingredient on a candle, or directly above, below, left, or right of it, lights that candle. You must collect all requested ingredients **and** light every candle before the run ends.
+Read the ingredient counts before making a move. Swap two neighboring tiles to form a horizontal or vertical line of at least three identical ingredients. Diagonal swaps and wrapping across a row are not allowed. An unsuccessful swap costs no move.
 
-Each recipe includes one **Moon Spark**. Activate it, then choose a cell to clear its entire row and column without spending a move. It can open a crowded part of the board, reach a difficult candle, or finish a recipe. If your move counter reaches zero while the spark remains unused, you still get that last chance.
+Each successful swap costs one move, even when it creates several cascades. Ingredients that match after falling also count toward the recipe. Their score increases with cascade depth, so a useful match can become a much bigger brew.
 
-## Features
+Some recipes add candles. Clear the ingredient on a candle, or directly above, below, left, or right of it, to light that candle. Finish **every ingredient target and every candle**. Collecting the ingredients alone is not enough.
 
-- **12 fixed, reproducible recipes**, from a first bottle of moonlight to the grand brew. All twelve have a verified legal completion within their move budgets.
-- A complete **6×6 match-three engine** with legal adjacent swaps, simultaneous matches, gravity, cascades, ingredient collection, and win/loss states.
-- **Magical cascade feedback:** matching ingredients gather light, burst into colored sparks, and stream toward the recipe. Surviving pieces fall from their real positions, new ingredients settle with a small bounce, and compact combo messages grow with the chain.
-- Candle objectives that reward where you clear, plus a one-use cross-clearing Moon Spark.
-- Invalid swaps cost no moves. Dead boards are automatically refreshed without resetting recipe progress or remaining moves.
-- Useful swap hints, unlimited restarts, recipe selection, and one-to-three-star results.
-- Tap, swipe, and keyboard controls; English and Simplified Chinese; optional synthesized sound and reduced-motion support.
-- Local best scores and recipe stars, plus shareable recipe links.
-- Static HTML, CSS, JavaScript modules, and original SVG art. No package installation, backend, account, or CDN is needed to play.
+Press **Moon Spark**, then choose a cell. Its row and column clear together: eleven unique cells on the first wave, with any further cascades resolved normally. The spark is available once per recipe and costs no move. At zero moves, an unused spark remains a final chance.
 
-## How to play
-
-1. Choose a recipe and read the ingredient targets beside or above the board.
-2. Select two neighboring ingredients, or swipe one toward its neighbor.
-3. Match three or more identical ingredients in a row or column. Watch the cascades finish before choosing again.
-4. In candle recipes, clear on or directly beside each candle to light it.
-5. Use your Moon Spark when its row-and-column clear will help most.
-6. Finish every goal. Eight or more moves left earns three stars; three or more earns two; any other successful finish earns one.
-
-There is no countdown timer. Hints and recipe retries have no penalty. A useful swap hint evaluates legal moves against your current goals; it is not a promise that every subsequent choice will win.
+There is no countdown. A win with at least eight moves left earns three stars; at least three earns two; other wins earn one. A hint evaluates useful legal swaps against the current goals, but does not guarantee that every later decision will win.
 
 ## Controls
 
-| Action | Touch / mouse | Keyboard |
+| Action | Mouse or touch | Keyboard |
 |---|---|---|
-| Select an ingredient | Tap a tile | Arrow keys move the focus, then Enter or Space |
-| Swap | Tap an adjacent tile, or swipe | Move focus to an adjacent tile, then Enter or Space |
-| Moon Spark | Press **Moon Spark**, then tap a tile | Focus the button with Tab, activate it, then select a tile |
-| Show a useful swap | Press **Hint** | H |
+| Select and swap | Tap two neighbors, or swipe | Arrows move focus; Enter or Space selects |
+| Moon Spark | Button, then a tile | Tab to the button, activate, then select |
+| Hint | Hint button | H |
 | Cancel selection | Tap the selected tile again | Escape |
-| Restart or change recipe | Use the restart button or recipe menu | Tab to the relevant control |
+| Restart or choose a recipe | Restart / recipe selector | Tab to the control |
 
-## Recipes, saving, and sharing
+Wait for a cascade to settle before the next swap. Restart and recipe selection remain available during effects: they cancel the old sequence, so it cannot update the new board.
 
-Recipes use deterministic seeds, so restarting a recipe gives the same initial board and the same outcomes for the same actions. The goal counts and candle arrangements become more demanding across the twelve recipes. Best stars and scores are stored locally for each recipe.
+## Records and reproducible recipes
 
-A link such as [`#recipe=8`](https://halloween-potion-match.crazy3d.org/#recipe=8) opens the eighth recipe. Shared links start the recipe from its beginning; they do not transmit a player’s unfinished board. Reloading also starts that recipe again. Best results, language, and sound preference remain on the same browser when storage is available.
-
-## Compact-player walkthrough
-
-![Witch’s Potion Match in a compact host iframe, showing recipe goals, the ingredient grid and Moon Spark](docs/images/mobile.jpg)
-
-Check the remaining recipe goals, then tap or swipe two neighboring ingredients. Let the cascade finish before choosing the next swap. Moon Spark clears the chosen row and column while keeping the move counter unchanged.
-
-*Actual interface captured in a browser iframe sized for the host player. This is a compact-window illustration, not a physical-phone test.*
-
-## Play on your site
-
-```html
-<iframe
-  src="https://halloween-potion-match.crazy3d.org/"
-  title="Witch’s Potion Match — Halloween match-three puzzle"
-  style="display:block;width:100%;height:654px;border:0"
-  allow="fullscreen"
-  allowfullscreen
-></iframe>
-```
-
-The game uses the actual iframe viewport and does not need a parent-page script. Its layout targets the existing **1160×654** desktop game window, **390×650 / 390×794** phone windows, and **844×340** short landscape window. The board resizes to the space left after the controls. The host may provide fullscreen. Very short phone windows make board details smaller; a taller frame is more comfortable. See [EMBEDDING.md](EMBEDDING.md) for permissions and integration details. These dimensions are browser layout targets, not claims of physical-device testing.
-
-## Run and test locally
-
-Serve the folder over HTTP(S); JavaScript modules do not run correctly from a plain `file://` opening.
-
-```bash
-python3 -m http.server 4173
-```
-
-Open `http://localhost:4173`. No build or dependency installation is required.
-
-```bash
-npm test
-# For individual built-in test results:
-node tests/engine.test.js
-node tests/input.test.js
-node tests/effects.test.js
-```
-
-The **24 rule, input, and animation-lifecycle tests** cover initial board stability, row-boundary checks, crossing matches, invalid swaps, cascade accounting, Moon Spark, gravity, candle goals, the zero-move last chance, dead-board recovery, all twelve campaign completions, strict recipe links, malformed saved preferences, and stale-pointer/concurrent-input regressions. They also check visual falling routes against actual engine outcomes, cancellation during each cascade phase, per-wave counters, and safe completion if an effect cannot run or its animation timeline stops advancing. Browser input, audio output, and the final host’s permission policy still need their own acceptance checks.
+The same recipe and the same actions produce the same outcomes. Best scores, stars, language, and sound preference are stored locally. Reloading restarts the recipe; unfinished boards are not resumed. A link such as [recipe 8](https://halloween-potion-match.crazy3d.org/#recipe=8) shares its starting layout, not a replay.
 
 ## FAQ
 
-### Is this a match-three game or a block-placement game?
+**Is Moon Spark required to win?** No. All twelve recipes have ordinary-swap completion checks; the spark is an extra option.
 
-It is a match-three game: swap neighboring ingredients to form lines of three or more. For placing differently shaped pieces into an empty grid, try [Witch’s Candy Blocks](https://halloween-block-blast.crazy3d.org/).
+**Why was the board rearranged?** When no legal swap remains, the game tries to reshuffle the existing ingredients. A very skewed set may need a refill. Scores, goals and remaining moves stay intact.
 
-### Can I finish a recipe without using Moon Spark?
+**What if an animation cannot finish?** The visual sequence has cancellation and timeout protection. The already calculated legal game result can finish without the effect, instead of leaving controls locked.
 
-Yes. The campaign test completes every recipe using ordinary legal swaps. The spark is an extra tactical option and a useful last chance, rather than a mandatory scripted move.
+## See the game
 
-### Why did the board change without using a move?
+![Compact Potion Match player showing the ingredient board, remaining moves and Moon Spark](docs/images/mobile.jpg)
 
-When no legal swaps remain, the game tries to shuffle the existing ingredients into a stable playable arrangement. An unusually skewed ingredient set may require a refill. Recipe progress, score, and remaining moves stay intact.
+Actual game interface in a compact browser iframe. This illustrates the layout; it is not a physical-phone performance test.
 
-### Does the game collect personal data?
+[Watch the 24-second introduction](https://halloween-potion-match.crazy3d.org/intro.html) · [Download the captioned MP4](docs/media/intro.mp4). This silent visual tour is assembled from actual game screenshots, not a continuous gameplay recording. The screenshots and video show captured interface states and may predate later visual refinements.
 
-The game code has no analytics, login, remote API, advertising SDK, or external asset requests. Results and preferences stay in browser storage. Sharing copies a recipe link; it does not contact a social network. If storage or clipboard access is blocked, gameplay continues and a share link can be copied manually. Your hosting provider may have its own standard request logs.
+## Embed it on your site
 
-### Does progress sync between devices?
+```html
+<iframe src="https://halloween-potion-match.crazy3d.org/"
+  title="Witch’s Potion Match"
+  style="display:block;width:100%;height:654px;border:0"
+  allow="fullscreen" allowfullscreen></iframe>
+```
 
-No. Progress is local to the browser and origin. Embedded and direct visits can have different storage partitions, and clearing site data removes saved results.
+The layout targets 1160×654 desktop, 390×650 / 390×794 portrait and 844×340 landscape windows. Controls use the actual iframe size; these browser checks are not a claim about every physical device.
 
-## More Halloween games
+The live site uses Cloudflare and is deployed from this GitHub repository. Give the iframe a real height and leave space for the host toolbar. Fullscreen may be provided by the host. See [EMBEDDING.md](EMBEDDING.md) for the integration contract.
 
-| Game | A different little adventure |
-|---|---|
-| [Witch’s Candy Blocks](https://halloween-block-blast.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-block-blast) | Place candy shapes on an 8×8 board and clear rows and columns. |
-| [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-pumpkin-shift) | Slide numbered tiles through a moonlit puzzle. |
-| [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-tripeaks) | Clear layered Halloween cards by rank. |
-| [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-mirror-hearts) | Guide two reflected ghosts home together. |
+## Run locally and check the rules
 
-**简体中文：**《魔药连消》包含 12 份固定配方、原料收集、邻接点亮烛火和每关一次月光火花。支持触屏、键盘与中英文切换；进度只保存在当前浏览器中。
+```sh
+python3 -m http.server 4173
+```
 
-## Creation credits
+Serve the repository root, then open [http://localhost:4173/](http://localhost:4173/). The game is static: no build or dependency installation is needed. Use HTTP(S), because direct `file://` access can block ES modules. Node.js is required for the tests.
 
-Designed, implemented, and reviewed through human-directed AI collaboration. The gameplay implementation, interface, and original SVG artwork were created for this project; optional sound is synthesized in the browser. Screenshots show the actual interface, and the short video is a captioned visual introduction assembled from those captures.
+```sh
+npm test
+```
+
+The **24 tests** cover rules, all twelve campaign completions, pointer-input races, real falling routes, wave-by-wave counters, cancellation at each phase, and recovery from failed or stalled animation timelines.
+
+The game source does not require an account, remote API, advertising SDK, or external asset CDN. Records stay in browser storage; there is no cloud sync. Cloudflare may add its own hosting scripts and request logs. Optional synthesized audio follows browser sound permissions.
+
+## More moonlit adventures 🍬
+
+- [Witch’s Candy Blocks](https://halloween-block-blast.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-block-blast) — 8×8 candy-block placement.
+- [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-pumpkin-shift) — Number-sliding rooms with Moon Glides.
+- [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-tripeaks) — Higher-or-lower solitaire and Moon Bridges.
+- [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-mirror-hearts) — Bring two mirrored ghosts home together.
+
+## Credits and a little support
+
+Created for **AshinTop’s Midnight Candy Club** through human-directed AI collaboration in design, programming, writing, testing, and review. The original artwork and synthesized sounds were made for this project. [Design notes](DESIGN.md) explain its intent.
+
+Enjoyed this little adventure? **[Star Witch’s Potion Match on GitHub](https://github.com/AshinTop/halloween-potion-match)** to save it for later and follow updates. Useful issue reports include the game mode or level, browser, window size, and steps that reproduce the problem. Explore the [complete Halloween collection](https://github.com/AshinTop/halloween-games).
