@@ -18,10 +18,16 @@ No-move boards try up to 200 seeded permutations preserving ingredient counts. A
 
 Muted violet, mint, parchment and candle gold; original vector art and a quiet illustrated cauldron. The board is the primary visual focus. Cell shapes identify ingredients as well as color; candles use a different silhouette. Tap-to-swap, swiping, keyboard selection, optional synthesized audio and reduced-motion CSS are supported. Help holds longer instructions while goals remain visible during play. Results explain completion or failure and offer the next recipe or retry.
 
+Each cascade has a short light-gathering beat, an ingredient-only burst, and a gravity/refill beat. Tile backgrounds and candle positions stay anchored while the ingredient artwork moves. Falling routes are reconstructed from the engine’s actual clear union, preserving the surviving ingredients’ order. A typical wave takes about 0.6–0.75 seconds; the initial swap adds 145 ms. Small combo badges stay near the board edge, while a representative ingredient emblem travels to each relevant recipe counter or the visible cauldron. The animation does not change scoring, ingredient counts, move costs, seeds, or level solutions.
+
+Per wave, decorative bursts are capped at 48 particles and 16 rings, reduced to 30 particles and 10 rings on small boards. At most five ingredient emblems travel at once. Later cascades add a brief 1.5 px horizontal accent; there is no sustained screen shake. Recipe completion adds a small cauldron reveal and three staggered stars, with celebration spread scaled down for short windows. Effects never receive pointer input. Reduced-motion preference omits travelling effects and falls rather than making players wait through invisible animation.
+
+Each visual run owns and cancels its timers, Web Animations and temporary elements. Restart and recipe selection remain usable during a cascade. The existing input epoch also guards every asynchronous stage, so an old run cannot commit a result, enable controls or show a celebration on a replacement board. If a visual phase fails, the already resolved engine result still completes safely.
+
 ## Data boundaries
 
 Only validated best score/star records and language/sound preferences are saved locally. A room hash chooses the initial recipe; no remote account or unfinished-board upload exists. Storage access is guarded. No runtime external assets or remote API requests. The build is plain HTML/CSS/ES modules.
 
 ## Verification
 
-17 built-in Node tests cover rule risks and full campaign completions. Browser acceptance is performed separately by the collection owner against final iframe sizes; unit results do not claim physical-device audio, touch, or hosting verification.
+24 built-in Node tests cover rule risks, full campaign completions, input races, actual falling trajectories, cancellable visual resources, per-wave counters, visual-failure recovery, and animation-timeout cleanup. Browser acceptance is performed separately by the collection owner against final iframe sizes; unit results do not claim physical-device audio, touch, or hosting verification.

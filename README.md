@@ -2,11 +2,11 @@
 
 **Swap enchanted ingredients, light the candles, and brew twelve little bottles of Halloween magic.** Witch’s Potion Match is a free browser puzzle from Midnight Candy Club, created as a seasonal companion for [BlockBlasty](https://blockblasty.top/). It combines familiar match-three swaps with ingredient recipes, spatial candle objectives, and a carefully timed Moon Spark.
 
-**[GitHub Pages deployment target](https://ashintop.github.io/halloween-potion-match/)** · [Embedding guide](EMBEDDING.md) · [Game design](DESIGN.md)
+**[Play online](https://halloween-potion-match.crazy3d.org/)** · [Embedding guide](EMBEDDING.md) · [Game design](DESIGN.md)
 
-**Deployment status:** GitHub Pages is not live yet. The `ashintop.github.io` links in this document are intended deployment addresses. Use the local-run instructions until the hosted game has been published and verified.
+**Live deployment:** Play on Cloudflare using the link above. The site is deployed from this GitHub repository. Hosting scripts and request logging may be added by Cloudflare independently of the game code.
 
-[Video player and transcript (deployment target)](https://ashintop.github.io/halloween-potion-match/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
+[Video player and transcript](https://halloween-potion-match.crazy3d.org/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
 
 ![Witch’s Potion Match: a Halloween match-three board with illustrated ingredients, recipe goals, and candle objectives](docs/images/gameplay.jpg)
 
@@ -24,6 +24,7 @@ Each recipe includes one **Moon Spark**. Activate it, then choose a cell to clea
 
 - **12 fixed, reproducible recipes**, from a first bottle of moonlight to the grand brew. All twelve have a verified legal completion within their move budgets.
 - A complete **6×6 match-three engine** with legal adjacent swaps, simultaneous matches, gravity, cascades, ingredient collection, and win/loss states.
+- **Magical cascade feedback:** matching ingredients gather light, burst into colored sparks, and stream toward the recipe. Surviving pieces fall from their real positions, new ingredients settle with a small bounce, and compact combo messages grow with the chain.
 - Candle objectives that reward where you clear, plus a one-use cross-clearing Moon Spark.
 - Invalid swaps cost no moves. Dead boards are automatically refreshed without resetting recipe progress or remaining moves.
 - Useful swap hints, unlimited restarts, recipe selection, and one-to-three-star results.
@@ -57,7 +58,7 @@ There is no countdown timer. Hints and recipe retries have no penalty. A useful 
 
 Recipes use deterministic seeds, so restarting a recipe gives the same initial board and the same outcomes for the same actions. The goal counts and candle arrangements become more demanding across the twelve recipes. Best stars and scores are stored locally for each recipe.
 
-A link such as [`#recipe=8`](https://ashintop.github.io/halloween-potion-match/#recipe=8) opens the eighth recipe. Shared links start the recipe from its beginning; they do not transmit a player’s unfinished board. Reloading also starts that recipe again. Best results, language, and sound preference remain on the same browser when storage is available.
+A link such as [`#recipe=8`](https://halloween-potion-match.crazy3d.org/#recipe=8) opens the eighth recipe. Shared links start the recipe from its beginning; they do not transmit a player’s unfinished board. Reloading also starts that recipe again. Best results, language, and sound preference remain on the same browser when storage is available.
 
 ## Compact-player walkthrough
 
@@ -71,7 +72,7 @@ Check the remaining recipe goals, then tap or swipe two neighboring ingredients.
 
 ```html
 <iframe
-  src="https://ashintop.github.io/halloween-potion-match/"
+  src="https://halloween-potion-match.crazy3d.org/"
   title="Witch’s Potion Match — Halloween match-three puzzle"
   style="display:block;width:100%;height:654px;border:0"
   allow="fullscreen"
@@ -96,15 +97,16 @@ npm test
 # For individual built-in test results:
 node tests/engine.test.js
 node tests/input.test.js
+node tests/effects.test.js
 ```
 
-The **17 rule and input tests** cover initial board stability, row-boundary checks, crossing matches, invalid swaps, cascade accounting, Moon Spark, gravity, candle goals, the zero-move last chance, dead-board recovery, all twelve campaign completions, strict recipe links, malformed saved preferences, and stale-pointer/concurrent-input regressions. Browser input, audio output, and the final host’s permission policy still need their own acceptance checks.
+The **24 rule, input, and animation-lifecycle tests** cover initial board stability, row-boundary checks, crossing matches, invalid swaps, cascade accounting, Moon Spark, gravity, candle goals, the zero-move last chance, dead-board recovery, all twelve campaign completions, strict recipe links, malformed saved preferences, and stale-pointer/concurrent-input regressions. They also check visual falling routes against actual engine outcomes, cancellation during each cascade phase, per-wave counters, and safe completion if an effect cannot run or its animation timeline stops advancing. Browser input, audio output, and the final host’s permission policy still need their own acceptance checks.
 
 ## FAQ
 
 ### Is this a match-three game or a block-placement game?
 
-It is a match-three game: swap neighboring ingredients to form lines of three or more. For placing differently shaped pieces into an empty grid, try [Witch’s Candy Blocks](https://github.com/AshinTop/halloween-block-blast).
+It is a match-three game: swap neighboring ingredients to form lines of three or more. For placing differently shaped pieces into an empty grid, try [Witch’s Candy Blocks](https://halloween-block-blast.crazy3d.org/).
 
 ### Can I finish a recipe without using Moon Spark?
 
@@ -126,10 +128,10 @@ No. Progress is local to the browser and origin. Embedded and direct visits can 
 
 | Game | A different little adventure |
 |---|---|
-| [Witch’s Candy Blocks](https://github.com/AshinTop/halloween-block-blast) | Place candy shapes on an 8×8 board and clear rows and columns. |
-| [Pumpkin Shift](https://github.com/AshinTop/halloween-pumpkin-shift) | Slide numbered tiles through a moonlit puzzle. |
-| [Trick-or-Treat TriPeaks](https://github.com/AshinTop/halloween-tripeaks) | Clear layered Halloween cards by rank. |
-| [Moonlit Mirrors](https://github.com/AshinTop/halloween-mirror-hearts) | Guide two reflected ghosts home together. |
+| [Witch’s Candy Blocks](https://halloween-block-blast.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-block-blast) | Place candy shapes on an 8×8 board and clear rows and columns. |
+| [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-pumpkin-shift) | Slide numbered tiles through a moonlit puzzle. |
+| [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-tripeaks) | Clear layered Halloween cards by rank. |
+| [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-mirror-hearts) | Guide two reflected ghosts home together. |
 
 **简体中文：**《魔药连消》包含 12 份固定配方、原料收集、邻接点亮烛火和每关一次月光火花。支持触屏、键盘与中英文切换；进度只保存在当前浏览器中。
 
