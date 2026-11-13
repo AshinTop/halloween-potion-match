@@ -4,7 +4,7 @@
 
 **Um pouco de luar, um punhado de doces e mais uma cascata caprichada.** Prepare doze poções de Halloween trocando ingredientes ilustrados, completando receitas e acendendo velas. Este jogo de combinar três faz parte do Midnight Candy Club e foi criado para o [BlockBlasty](https://blockblasty.top/).
 
-**[Jogar agora](https://halloween-potion-match.crazy3d.org/)** · [Coleção de Halloween](https://github.com/AshinTop/halloween-games) · [Guia de incorporação](EMBEDDING.md) · [Notas de design](DESIGN.md)
+**[Jogar agora](https://crazy3d.org/halloween-potion-match)** · [Coleção de Halloween](https://github.com/AshinTop/halloween-games) · [Guia de incorporação](EMBEDDING.md) · [Notas de design](DESIGN.md)
 
 **Idiomas da documentação:** English, 简体中文, Español, Português (Brasil), 日本語. **Interface do jogo:** apenas inglês e chinês simplificado. Os demais idiomas do README não significam que os menus do jogo já foram traduzidos.
 
@@ -64,6 +64,8 @@ Interface real capturada em um iframe compacto no navegador. A imagem mostra a o
 
 ## Coloque o jogo no seu site
 
+Página para jogar: [Jogar na Crazy3D](https://crazy3d.org/halloween-potion-match). Para incorporar o jogo, use o endereço direto `https://halloween-potion-match.crazy3d.org/`, não a página da Crazy3D. O exemplo de iframe abaixo mantém o subdomínio do jogo.
+
 ```html
 <iframe src="https://halloween-potion-match.crazy3d.org/"
   title="Witch’s Potion Match"
@@ -93,10 +95,10 @@ O código do jogo não exige conta, API remota, SDK de anúncios nem CDN de arqu
 
 ## Outras aventuras ao luar 🍬
 
-- [Witch’s Candy Blocks](https://halloween-block-blast.crazy3d.org/) · [Código](https://github.com/AshinTop/halloween-block-blast) — Encaixe blocos de doces em um tabuleiro 8×8.
-- [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [Código](https://github.com/AshinTop/halloween-pumpkin-shift) — Quebra-cabeças deslizantes com Moon Glides.
-- [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [Código](https://github.com/AshinTop/halloween-tripeaks) — Paciência com valores vizinhos e Moon Bridges.
-- [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [Código](https://github.com/AshinTop/halloween-mirror-hearts) — Leve dois fantasmas espelhados de volta para casa.
+- [Witch’s Candy Blocks](https://crazy3d.org/halloween-block-blast) · [Código](https://github.com/AshinTop/halloween-block-blast) — Encaixe blocos de doces em um tabuleiro 8×8.
+- [Pumpkin Shift](https://crazy3d.org/halloween-pumpkin-shift) · [Código](https://github.com/AshinTop/halloween-pumpkin-shift) — Quebra-cabeças deslizantes com Moon Glides.
+- [Trick-or-Treat TriPeaks](https://crazy3d.org/halloween-tripeaks) · [Código](https://github.com/AshinTop/halloween-tripeaks) — Paciência com valores vizinhos e Moon Bridges.
+- [Moonlit Mirrors](https://crazy3d.org/halloween-mirror-hearts) · [Código](https://github.com/AshinTop/halloween-mirror-hearts) — Leve dois fantasmas espelhados de volta para casa.
 
 ## Créditos e apoio
 

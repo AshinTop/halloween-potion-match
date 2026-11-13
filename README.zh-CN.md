@@ -4,7 +4,7 @@
 
 **一点月光，一把糖果，再来一串漂亮连消。**《魔药连消》把熟悉的相邻交换，变成十二份小小的万圣节配方：收集原料、点亮烛火，再把最后一撮星光送进锅里。游戏属于 Midnight Candy Club，为 [BlockBlasty](https://blockblasty.top/) 的节日专题创作。
 
-**[在线试玩](https://halloween-potion-match.crazy3d.org/)** · [万圣节游戏总合集](https://github.com/AshinTop/halloween-games) · [嵌入说明](EMBEDDING.md) · [设计说明](DESIGN.md)
+**[在线试玩](https://crazy3d.org/halloween-potion-match)** · [万圣节游戏总合集](https://github.com/AshinTop/halloween-games) · [嵌入说明](EMBEDDING.md) · [设计说明](DESIGN.md)
 
 **文档语言：** English、简体中文、Español、Português (Brasil)、日本語。**游戏界面目前仅支持英语和简体中文**；西班牙语、葡萄牙语和日语版本为完整说明文档，并非已实现的界面翻译。
 
@@ -64,6 +64,8 @@
 
 ## 嵌入你的站点
 
+玩家页面：[在 Crazy3D 游玩](https://crazy3d.org/halloween-potion-match)。嵌入时使用游戏直连地址 `https://halloween-potion-match.crazy3d.org/`，不要把 Crazy3D 游戏介绍页用作 iframe；下方示例保留游戏子域名。
+
 ```html
 <iframe src="https://halloween-potion-match.crazy3d.org/"
   title="Witch’s Potion Match"
@@ -93,10 +95,10 @@ npm test
 
 ## 下一段月光小冒险 🍬
 
-- [Witch’s Candy Blocks](https://halloween-block-blast.crazy3d.org/) · [源码](https://github.com/AshinTop/halloween-block-blast) — 8×8 糖果方块摆放消除.
-- [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [源码](https://github.com/AshinTop/halloween-pumpkin-shift) — 带月光滑行的数字滑块谜题.
-- [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [源码](https://github.com/AshinTop/halloween-tripeaks) — 高低相邻接龙与月亮桥.
-- [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [源码](https://github.com/AshinTop/halloween-mirror-hearts) — 让镜像移动的双幽灵一起到家.
+- [Witch’s Candy Blocks](https://crazy3d.org/halloween-block-blast) · [源码](https://github.com/AshinTop/halloween-block-blast) — 8×8 糖果方块摆放消除.
+- [Pumpkin Shift](https://crazy3d.org/halloween-pumpkin-shift) · [源码](https://github.com/AshinTop/halloween-pumpkin-shift) — 带月光滑行的数字滑块谜题.
+- [Trick-or-Treat TriPeaks](https://crazy3d.org/halloween-tripeaks) · [源码](https://github.com/AshinTop/halloween-tripeaks) — 高低相邻接龙与月亮桥.
+- [Moonlit Mirrors](https://crazy3d.org/halloween-mirror-hearts) · [源码](https://github.com/AshinTop/halloween-mirror-hearts) — 让镜像移动的双幽灵一起到家.
 
 ## 制作说明与支持
 

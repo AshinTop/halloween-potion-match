@@ -1,5 +1,13 @@
 # Embedding Witch’s Potion Match
 
+## Player page and iframe source / 玩家页面与嵌入地址
+
+- Player page / 玩家页面: [Crazy3D](https://crazy3d.org/halloween-potion-match)
+- Iframe source / iframe 地址: `https://halloween-potion-match.crazy3d.org/`
+
+Use the game subdomain for iframe embedding, not the Crazy3D player page. 游戏嵌入请使用上面的独立子域名，不要嵌入 Crazy3D 游戏页面。
+
+
 ## Static deployment
 
 Deploy `index.html`, `style.css`, `app.js`, `engine.js`, `effects.js`, `art.js`, and `icon.svg` together over HTTP(S). The game uses relative ES-module imports and requires no build, server API, package installation, external font, or image CDN. Keep the release query parameters on the stylesheet and module references so cached deployments receive the corresponding visual assets.

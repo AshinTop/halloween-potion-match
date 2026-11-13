@@ -4,7 +4,7 @@
 
 **月明かりを少々、お菓子をひとつかみ。もう一度、きれいな連鎖を。** 材料を入れ替え、レシピを満たし、ろうそくを灯して 12 種類の魔法薬を作ります。Midnight Candy Club の一作で、[BlockBlasty](https://blockblasty.top/) のハロウィン企画として制作したブラウザーパズルです。
 
-**[今すぐ遊ぶ](https://halloween-potion-match.crazy3d.org/)** · [ハロウィンゲーム集](https://github.com/AshinTop/halloween-games) · [埋め込みガイド](EMBEDDING.md) · [設計ノート](DESIGN.md)
+**[今すぐ遊ぶ](https://crazy3d.org/halloween-potion-match)** · [ハロウィンゲーム集](https://github.com/AshinTop/halloween-games) · [埋め込みガイド](EMBEDDING.md) · [設計ノート](DESIGN.md)
 
 **README の言語：** English、简体中文、Español、Português (Brasil)、日本語。**ゲーム内の表示は英語と簡体字中国語のみ**です。日本語などの README があっても、ゲームのメニューがその言語に対応しているわけではありません。
 
@@ -64,6 +64,8 @@
 
 ## 自分のサイトに埋め込む
 
+プレイヤー向けページ：[Crazy3D で遊ぶ](https://crazy3d.org/halloween-potion-match)。埋め込みには Crazy3D の紹介ページではなく、ゲームの直接 URL `https://halloween-potion-match.crazy3d.org/` を使用してください。下の iframe 例ではゲームのサブドメインを使用しています。
+
 ```html
 <iframe src="https://halloween-potion-match.crazy3d.org/"
   title="Witch’s Potion Match"
@@ -93,10 +95,10 @@ npm test
 
 ## 月明かりの下でもうひと遊び 🍬
 
-- [Witch’s Candy Blocks](https://halloween-block-blast.crazy3d.org/) · [ソース](https://github.com/AshinTop/halloween-block-blast) — 8×8 の盤面にキャンディーブロックを配置.
-- [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [ソース](https://github.com/AshinTop/halloween-pumpkin-shift) — Moon Glide を使う数字スライドパズル.
-- [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [ソース](https://github.com/AshinTop/halloween-tripeaks) — 前後の数字をつなぐソリティアと Moon Bridge.
-- [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [ソース](https://github.com/AshinTop/halloween-mirror-hearts) — 鏡のように動く二人のおばけを家へ.
+- [Witch’s Candy Blocks](https://crazy3d.org/halloween-block-blast) · [ソース](https://github.com/AshinTop/halloween-block-blast) — 8×8 の盤面にキャンディーブロックを配置.
+- [Pumpkin Shift](https://crazy3d.org/halloween-pumpkin-shift) · [ソース](https://github.com/AshinTop/halloween-pumpkin-shift) — Moon Glide を使う数字スライドパズル.
+- [Trick-or-Treat TriPeaks](https://crazy3d.org/halloween-tripeaks) · [ソース](https://github.com/AshinTop/halloween-tripeaks) — 前後の数字をつなぐソリティアと Moon Bridge.
+- [Moonlit Mirrors](https://crazy3d.org/halloween-mirror-hearts) · [ソース](https://github.com/AshinTop/halloween-mirror-hearts) — 鏡のように動く二人のおばけを家へ.
 
 ## 制作クレジットと応援
 

@@ -4,7 +4,7 @@
 
 **A little moonlight, a handful of sweets, and one more lovely cascade.** Brew twelve Halloween potions by swapping illustrated ingredients, collecting recipe targets, and lighting candles. This cozy browser match-3 game belongs to Midnight Candy Club and was created for [BlockBlasty](https://blockblasty.top/).
 
-**[Play online](https://halloween-potion-match.crazy3d.org/)** · [All Halloween games](https://github.com/AshinTop/halloween-games) · [Embedding guide](EMBEDDING.md) · [Design notes](DESIGN.md)
+**[Play online](https://crazy3d.org/halloween-potion-match)** · [All Halloween games](https://github.com/AshinTop/halloween-games) · [Embedding guide](EMBEDDING.md) · [Design notes](DESIGN.md)
 
 **Document languages:** English, 简体中文, Español, Português (Brasil), 日本語. **Game interface:** English and Simplified Chinese only; the other README languages do not add in-game translations.
 
@@ -64,6 +64,8 @@ Actual game interface in a compact browser iframe. This illustrates the layout; 
 
 ## Embed it on your site
 
+Player page: [Play on Crazy3D](https://crazy3d.org/halloween-potion-match). For embedding, use the direct game URL `https://halloween-potion-match.crazy3d.org/`, not the Crazy3D page. Keep the iframe example below on the game subdomain.
+
 ```html
 <iframe src="https://halloween-potion-match.crazy3d.org/"
   title="Witch’s Potion Match"
@@ -93,10 +95,10 @@ The game source does not require an account, remote API, advertising SDK, or ext
 
 ## More moonlit adventures 🍬
 
-- [Witch’s Candy Blocks](https://halloween-block-blast.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-block-blast) — 8×8 candy-block placement.
-- [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-pumpkin-shift) — Number-sliding rooms with Moon Glides.
-- [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-tripeaks) — Higher-or-lower solitaire and Moon Bridges.
-- [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-mirror-hearts) — Bring two mirrored ghosts home together.
+- [Witch’s Candy Blocks](https://crazy3d.org/halloween-block-blast) · [Source](https://github.com/AshinTop/halloween-block-blast) — 8×8 candy-block placement.
+- [Pumpkin Shift](https://crazy3d.org/halloween-pumpkin-shift) · [Source](https://github.com/AshinTop/halloween-pumpkin-shift) — Number-sliding rooms with Moon Glides.
+- [Trick-or-Treat TriPeaks](https://crazy3d.org/halloween-tripeaks) · [Source](https://github.com/AshinTop/halloween-tripeaks) — Higher-or-lower solitaire and Moon Bridges.
+- [Moonlit Mirrors](https://crazy3d.org/halloween-mirror-hearts) · [Source](https://github.com/AshinTop/halloween-mirror-hearts) — Bring two mirrored ghosts home together.
 
 ## Credits and a little support
 
